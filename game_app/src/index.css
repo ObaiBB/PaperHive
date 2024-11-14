@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #161B33; 
+  border-radius: 10px;
+}
+
+.container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.hex_HIGH {
+  display: inline-block;
+  filter: url('#goo');
+  color: #161B33;
+  width: 35%;
+  position: absolute;
+}
+
+.hex_MED {
+  display: inline-block;
+  filter: url('#goo');
+  color: #6B7FD7;
+  width: 35%;
+  position: absolute;
+}
+
+.hex_LOW {
+  display: inline-block;
+  filter: url('#goo');
+  color: #FFE066;
+  width: 35%;
+  position: absolute;
+}
+
+.hex_HIGH::before {
+  content: "";
+  display: block;
+  background: currentColor;
+  padding-top: 86.6%;
+  /* 100%*cos(30) */
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  
+}
+
+.hex_MED::before {
+  content: "";
+  display: block;
+  background: currentColor;
+  padding-top: 86.6%;
+  /* 100%*cos(30) */
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.hex_LOW::before {
+  content: "";
+  display: block;
+  background: currentColor;
+  padding-top: 86.6%;
+  /* 100%*cos(30) */
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.pos0 {
+  top: 0%;
+  left: 30%;
+}
+
+.pos1 {
+  top: 17%;
+  left: 0%;
+}
+
+.pos2 {
+  top: 17%;
+  left: 60%;
+}
+
+.pos3 {
+  top: 34%;
+  left: 30%;
+}
+
+.pos4 {
+  top: 51%;
+  left: 0%;
+}
+
+.pos5 {
+  top: 68%;
+  left: 30%;
+}
+
+.pos6 {
+  top: 51%;
+  left: 60%;
+}
+
+/* New hexagons */
+
+.pos1a {
+  top: -10%;
+  left: 0%;
+}
+
+.pos1b {
+  top: 34%;
+  left: 0%;
+}
+
+.pos1c {
+  top: 68%;
+  left: 0%;
+}
+
+.pos2a {
+  top: 0%;
+  left: 60%;
+}
+
+.pos2b {
+  top: 34%;
+  left: 60%;
+}
+
+.pos2c {
+  top: 68%;
+  left: 60%;
+}
+
+/* Smaller hexagons */
+.hex_HIGH.small {
+  width: 25%;
+}
+
+.hex_MED.small {
+  width: 25%;
+}
+
+.hex_LOW.small {
+  width: 25%;
+}
+
+/* Adjacency constraints */
+.pos1 .pos1a,
+.pos1 .pos1b,
+.pos1 .pos1c,
+.pos2 .pos2a,
+.pos2 .pos2b,
+.pos2 .pos2c,
+.pos4 .pos1a,
+.pos4 .pos1b,
+.pos4 .pos1c,
+.pos5 .pos2a,
+.pos5 .pos2b,
+.pos5 .pos2c,
+.pos6 .pos1a,
+.pos6 .pos1b,
+.pos6 .pos1c,
+.pos7 .pos2a,
+.pos7 .pos2b,
+.pos7 .pos2c {
+  display: none;
+}
+
+.pos1 .pos2a,
+.pos1 .pos2b,
+.pos1 .pos2c,
+.pos2 .pos1a,
+.pos2 .pos1b,
+.pos2 .pos1c,
+.pos4 .pos2a,
+.pos4 .pos2b,
+.pos4 .pos2c,
+.pos5 .pos1a,
+.pos5 .pos1b,
+.pos5 .pos1c,
+.pos6 .pos2a,
+.pos6 .pos2b,
+.pos6 .pos2c,
+.pos7 .pos1a,
+.pos7 .pos1b,
+.pos7 .pos1c {
+  display: none;
+}
+
+.pos1 .pos3,
+.pos2 .pos3,
+.pos4 .pos3,
+.pos5 .pos3,
+.pos6 .pos3,
+.pos7 .pos3 {
+  display: none;
+}
+
+.middleHEX{
+  fill: black
+}
+
+/* Maximum 3 hexagons per position */
+.pos1 .hex_HIGH:nth-of-type(4),
+.pos1 .hex_MED:nth-of-type(4),
+.pos1 .hex_LOW:nth-of-type(4),
+.pos2 .hex_HIGH:nth-of-type(4),
+.pos2 .hex
+
+:root {
+  --black-gradient: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+.fill-HEX-HIGH{
+  fill: #161B33
+}
+
+.fill-HEX-MID{
+  fill: #6B7FD7;
+}
+
+.fill-HEX-LOW{
+  fill: #FFE066;
+}
+
+.no-scrollbar::-webkit-scrollbar { 
+  display: none; 
+} 
+
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+
+.text-gradient {
+  background: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #def9fa 0.89%,
+    #bef3f5 17.23%,
+    #9dedf0 42.04%,
+    #7de7eb 55.12%,
+    #5ce1e6 71.54%,
+    #33bbcf 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.bg-blue-gradient {
+  background: linear-gradient(
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
+  );
+}
+
+.bg-black-gradient {
+  background: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+}
+
+.bg-black-gradient-2 {
+  background: linear-gradient(
+    -168.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+}
+
+.bg-gray-gradient {
+  background: linear-gradient(
+    153.47deg,
+    rgba(255, 255, 255, 0) -341.94%,
+    #14101d 95.11%
+  );
+}
+
+.bg-discount-gradient {
+  background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
+}
+
+.box-shadow {
+  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+.sidebar {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.feature-card:hover {
+  background: var(--black-gradient);
+  box-shadow: var(--card-shadow);
+}
+
+.feedback-container .feedback-card:last-child {
+  margin-right: 0px;
+}
+
+.feedback-card {
+  background: transparent;
+}
+
+.feedback-card:hover {
+  background: var(--black-gradient);
+}
+
+.blue__gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+  filter: blur(123px);
+}
+
+.pink__gradient {
+  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
+  filter: blur(900px);
+}
+
+.white__gradient {
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(750px);
+}
